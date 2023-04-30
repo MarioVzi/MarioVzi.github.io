@@ -1,0 +1,61 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5F5F5;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+  margin-top: 800px;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #d9d9d9;
+}
+
+h1 span {
+  display: inline-block;
+  position: relative;
+}
+
+h1 span::before,
+h1 span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h1 span::before {
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+h1 span::after {
+  right: -20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #333;
+  z-index: 9999;
+}
+
+
+
