@@ -68,7 +68,7 @@ dfMessenger.addEventListener('df-messenger-loaded', function () {
         $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
 
         var style = document.createElement( 'style' );
-        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:480px;max-height:480px;}';
+        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:900px;max-height:900px;}';
         $r2.shadowRoot.appendChild( style );
 });
 }
@@ -79,6 +79,6 @@ dfMessenger.addEventListener('df-messenger-loaded', function () {
         $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
 
         var style = document.createElement( 'style' );
-        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:480px;max-height:480px;}';
+        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:900px;max-height:900px;}';
         $r2.shadowRoot.appendChild( style );
 });
