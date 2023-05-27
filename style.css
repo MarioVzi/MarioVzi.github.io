@@ -56,6 +56,10 @@ h1 span::after {
   border-left: 20px solid #333;
   z-index: 9999;
 }
+.chat-wrapper[opened="true"] {
 
+   height:73% !important;
 
+  width: 88% !important;
+}
 
