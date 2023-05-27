@@ -58,27 +58,12 @@ h1 span::after {
 }
 .chat-wrapper[opened="true"] {
 
-   height:73% !important;
+   height:700px !important;
 
-  width: 88% !important;
+  width: 500px !important;
 
-  const dfMessenger = document.querySelector('df-messenger');
-dfMessenger.addEventListener('df-messenger-loaded', function () {
-        $r1 = document.querySelector("df-messenger");
-        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
 
-        var style = document.createElement( 'style' );
-        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:900px;max-height:900px;}';
-        $r2.shadowRoot.appendChild( style );
-});
 }
 
-const dfMessenger = document.querySelector('df-messenger');
-dfMessenger.addEventListener('df-messenger-loaded', function () {
-        $r1 = document.querySelector("df-messenger");
-        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
 
-        var style = document.createElement( 'style' );
-        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:900px;max-height:900px;}';
-        $r2.shadowRoot.appendChild( style );
-});
+
