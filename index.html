@@ -46,10 +46,9 @@
 window.addEventListener('dfMessengerLoaded', function (event) {
   const dfMessenger = document.querySelector('df-messenger');
   const openText = ('Hallo! Ich bin Chatty die Plaudertasche! Mit "Hallo" kannst du jederzeit das Gespräch neu starten.');
-    const openText2 = ('Wie heitß du?');
+  dfMessenger.renderCustomText(openText);  
+  
 
-  dfMessenger.renderCustomText(openText);
-  dfMessenger.renderCustomText(openText2);
 });
 
 </script>
