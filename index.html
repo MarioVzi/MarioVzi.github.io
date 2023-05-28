@@ -34,6 +34,7 @@
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
 <df-messenger
   df-cx="true"
+              inten="welcome"
   location="europe-west3"
   chat-title="Chatty"
   agent-id="6198e2b3-8682-4c36-bd6a-6c91a67c84e7"
@@ -41,17 +42,7 @@
 ></df-messenger>
     
     
-    
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script><script>
-window.addEventListener('dfMessengerLoaded', function (event) {
-  const dfMessenger = document.querySelector('df-messenger');
-  const openText = ('Hallo! Ich bin Chatty die Plaudertasche! Mit "Hallo" kannst du jederzeit das Gespräch neu starten.');
-  dfMessenger.renderCustomText(openText);  
-  
 
-});
-
-</script>
     
   </body>
 </html>
