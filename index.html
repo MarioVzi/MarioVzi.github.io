@@ -40,6 +40,18 @@
   agent-id="6198e2b3-8682-4c36-bd6a-6c91a67c84e7"
   language-code="de"
 ></df-messenger>
+    
+    
+    
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script><script>
+window.addEventListener('dfMessengerLoaded', function (event) {
+  const dfMessenger = document.querySelector('df-messenger');
+  const openText = ('<The Text You Want To Display On Page Load>');
+dfMessenger.renderCustomText(openText);
+});
+
+</script>
+    
   </body>
 </html>
 
