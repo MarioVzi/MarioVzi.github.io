@@ -57,7 +57,7 @@
         $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
 
         var sheet = new CSSStyleSheet;
-        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 400px }`);
+        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 800px }`);
         $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
 
         // MORE OF YOUR DIALOGFLOW MESSENGER CODE
@@ -70,7 +70,7 @@
 
     const nonMobileMinWidth = 501; // Breakpoint where DF Messenger switches between mobile/non-mobile styles
 
-    style.textContent = '@media screen and (min-width: ' + nonMobileMinWidth + 'px) { .chat-wrapper { max-height: 65% } }';
+    style.textContent = '@media screen and (min-width: ' + nonMobileMinWidth + 'px) { .chat-wrapper { max-height: 5% } }';
 
     dfMessenger.shadowRoot.querySelector('df-messenger-chat').shadowRoot.appendChild(style);</script>
     
