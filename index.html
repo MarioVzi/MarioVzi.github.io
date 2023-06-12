@@ -41,38 +41,15 @@
     
     
     
-        <script>$(document).ready(function() {
-    
-    // YOUR CODE (NOT RELATED TO DIALOGFLOW MESSENGER)
-
-    window.addEventListener('dfMessengerLoaded', function (event) {
+        <script>const dfMessenger = document.querySelector('df-messenger');
+dfMessenger.addEventListener('df-messenger-loaded', function () {
         $r1 = document.querySelector("df-messenger");
         $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
-        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
 
-        var sheet = new CSSStyleSheet;
-        sheet.replaceSync( `div.chat-wrapper chat-open { height: 800px }`);
-        $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
-
-        // MORE OF YOUR DIALOGFLOW MESSENGER CODE
-    });
+        var style = document.createElement( 'style' );
+        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:480px;max-height:480px;}';
+        $r2.shadowRoot.appendChild( style );
 });</script>
-    
-    
-    
-    
-    
-
-    
-    <script>window.addEventListener('dfMessengerLoaded', function (event) {
-    const dfMessenger = document.querySelector('df-messenger'); 
-    const style = document.createElement('style');
-
-    const nonMobileMinWidth = 501; // Breakpoint where DF Messenger switches between mobile/non-mobile styles
-
-    style.textContent = '@media screen and (min-width: ' + nonMobileMinWidth + 'px) { .chat-wrapper { max-height: 5% } }';
-
-    dfMessenger.shadowRoot.querySelector('df-messenger-chat').shadowRoot.appendChild(style);</script>
     
     
     
