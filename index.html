@@ -1,87 +1,58 @@
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-
-  
-      <title>Ask me!</title>
+<head>
+    <title>Frag mich!</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #F5F5F5;
-      }
-      h1 {
-        text-align: center;
-        font-size: 3em;
-        margin-top: 300px;
-        color: #333;
-        text-shadow: 1px 1px #fff;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 300px;
+            color: #333;
+            text-shadow: 1px 1px #fff;
+        }
     </style>
- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-       
-  </head>
-    
-    
-    
-    
-  <body>
-    <h1>Blasy Einkauf & Angebote</h1>
-    
-     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-    
-    
-    
-    
-    
-    
-    
-        <script>
-          $(document).ready(function() {
-    window.addEventListener('dfMessengerLoaded', function (event) {
-        $r1 = document.querySelector("df-messenger");
-        $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
-        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
 
-        var sheet = new CSSStyleSheet;
-        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 400px }`);
-        $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+<body>
+<h1>Blasy Einkauf & Angebote</h1>
 
-        // MORE OF YOUR DIALOGFLOW MESSENGER CODE
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+
+<script>
+    $(document).ready(function () {
+        window.addEventListener('dfMessengerLoaded', function (event) {
+            $r1 = document.querySelector("df-messenger");
+            $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+            $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+
+            var sheet = new CSSStyleSheet;
+            sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 400px }`);
+            $r2.shadowRoot.adoptedStyleSheets = [sheet];
+
+        });
     });
-});
-         
-          </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <df-messenger
-  df-cx="true"
-              intent="welcome"
-  location="europe-west3"
-  chat-title="Chatty"
-  agent-id="6198e2b3-8682-4c36-bd6a-6c91a67c84e7"
-  language-code="de"
-></df-messenger>
-    
-    
+</script>
 
-    
-  </body>
+
+<df-messenger
+        df-cx="true"
+        intent="welcome"
+        location="europe-west3"
+        chat-title="BlasyBot"
+        agent-id="6198e2b3-8682-4c36-bd6a-6c91a67c84e7"
+        language-code="de"
+></df-messenger>
+
+
+</body>
 </html>
 
 
