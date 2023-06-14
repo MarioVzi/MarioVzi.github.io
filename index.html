@@ -22,7 +22,7 @@
 
 
 <body>
-<h1>Blasy Einkauf & Angebote1</h1>
+<h1>Blasy Einkauf & Angebote2</h1>
 
     
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
@@ -36,7 +36,7 @@
             $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
 
             var sheet = new CSSStyleSheet;
-            sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 900px }`);
+            sheet.replaceSync(`div.chat-wrapper[opened="true"] { height: 900px, border: 10px solid red }`);
             $r2.shadowRoot.adoptedStyleSheets = [sheet];
 
         });
