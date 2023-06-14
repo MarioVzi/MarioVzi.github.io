@@ -31,8 +31,7 @@
   <body>
     <h1>Blasy Einkauf & Angebote</h1>
     
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-
+     
     
     
     
@@ -40,16 +39,22 @@
     
     
     
-    
-        <script>const dfMessenger = document.querySelector('df-messenger');
-dfMessenger.addEventListener('df-messenger-loaded', function () {
+        <script>
+          $(document).ready(function() {
+    window.addEventListener('dfMessengerLoaded', function (event) {
         $r1 = document.querySelector("df-messenger");
         $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+        $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
 
-        var style = document.createElement( 'style' );
-        style.innerHTML = 'div.chat-wrapper[opened="true"]{height:480px;max-height:480px;}';
-        $r2.shadowRoot.appendChild( style );
-});</script>
+        var sheet = new CSSStyleSheet;
+        sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 400px }`);
+        $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+
+        // MORE OF YOUR DIALOGFLOW MESSENGER CODE
+    });
+});
+         
+          </script>
     
     
     
